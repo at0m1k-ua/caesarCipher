@@ -25,8 +25,8 @@ class CaesarCipherTest(TestCase):
                                                              shift: int):
         alphabet = Alphabet.load_from_json('../alphabet.json')
         caesar_cipher = CaesarCipher(alphabet)
-        encoded_str = caesar_cipher.encode(input_str, shift)
+        encoded_str = caesar_cipher.encrypt(input_str, shift)
         self.assertEqual(expected_str, encoded_str)
 
-        decoded_str = caesar_cipher.decode(encoded_str, shift)
+        decoded_str = caesar_cipher.decrypt(encoded_str, shift)
         self.assertEqual(input_str, decoded_str)

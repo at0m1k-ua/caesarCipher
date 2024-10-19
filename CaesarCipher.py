@@ -5,10 +5,10 @@ class CaesarCipher:
     def __init__(self, alphabet: Alphabet):
         self.__alphabet = alphabet
 
-    def encode(self, input_str: str, shift: int):
+    def encrypt(self, input_str: str, shift: int):
         return self.__shift(input_str, shift)
 
-    def decode(self, input_str: str, shift: int):
+    def decrypt(self, input_str: str, shift: int):
         return self.__shift(input_str, -shift)
 
     def __shift(self, input_str: str, shift: int):
